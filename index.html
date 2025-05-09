@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
+<script>
+  document.documentElement.style.visibility = 'hidden';
+  var senha = prompt("Por favor, introduza a palavra-passe para aceder:");
+  if (senha !== "mtc2025") {
+    alert("Acesso negado. Página protegida.");
+    window.location.href = "https://www.google.com";
+  } else {
+    document.documentElement.style.visibility = 'visible';
+  }
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Integrado de Matching para Diagnóstico na MTC</title>
