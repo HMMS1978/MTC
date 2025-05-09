@@ -4,77 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Integrado de Matching para Diagnóstico na MTC</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f9f9f9;
-        }
-        #toc {
-            background-color: #eee;
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin-bottom: 30px;
-            border-radius: 5px;
-        }
-        #toc ul {
-            list-style: none;
-            padding: 0;
-        }
-        #toc li {
-            margin-bottom: 5px;
-        }
-        h1, h2, h3, h4 {
-            color: #333;
-            margin-top: 1.5em;
-        }
-        h1 {
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-        }
-        h2 {
-             border-bottom: 1px solid #ddd;
-             padding-bottom: 3px;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-bottom: 1em;
-            border: 1px solid #ccc;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
-            vertical-align: top;
-        }
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-        ul {
-            margin-left: 20px;
-        }
-        li {
-            margin-bottom: 0.5em;
-        }
-        p {
-            margin-bottom: 1em;
-        }
-        strong {
-            font-weight: bold;
-        }
-        .section {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-    </style>
+    
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+  }
+  header, footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+  }
+  nav {
+    background: #444;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  nav a {
+    color: #fff;
+    padding: 14px 20px;
+    display: inline-block;
+    text-decoration: none;
+  }
+  nav a:hover {
+    background: #555;
+  }
+  .section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+  }
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  form button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  form button:hover {
+    background: #555;
+  }
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+    }
+    nav a {
+      text-align: center;
+    }
+  }
+</style>
+
 </head>
 <body>
+<script>
+  var senha = prompt("Por favor, introduza a palavra-passe para aceder:");
+  if (senha !== "mtc2025") {
+    alert("Acesso negado. Página protegida.");
+    window.location.href = "https://www.google.com";
+  }
+</script>
+
 
 <h1>Sistema Integrado de Matching para Diagnóstico na MTC</h1>
 
@@ -1949,6 +1959,18 @@
 <p>O sistema é particularmente eficaz para as categorias específicas mencionadas pelo usuário, incluindo problemas de pele, emocionais, insônias, dores musculares e articulares, e problemas oculares.</p>
 <p>Recomenda-se a utilização deste sistema como uma ferramenta de apoio ao diagnóstico na prática clínica, sempre considerando a individualidade de cada paciente e a complexidade da MTC.</p>
 <p>*(Nota: Esta validação foi realizada com base nos materiais fornecidos e nos princípios da MTC. Recomenda-se a validação contínua do sistema na prática clínica para refinamento e aprimoramento.)*</p></div>
+
+
+<div class="section" id="contacto">
+  <h2>Contacto</h2>
+  <form action="https://formsubmit.io/send/teu-email@gmail.com" method="POST">
+    <input type="hidden" name="_redirect" value="https://hmms1978.github.io/MTC/obrigado.html">
+    <label>Nome:<br><input type="text" name="nome" required></label><br><br>
+    <label>Email:<br><input type="email" name="email" required></label><br><br>
+    <label>Mensagem:<br><textarea name="mensagem" rows="6" required></textarea></label><br><br>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
 
 </body>
 </html>
