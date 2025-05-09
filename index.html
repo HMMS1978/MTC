@@ -17,13 +17,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Integrado de Matching para Diagnóstico na MTC</title>
     
+
 <style>
   body {
     font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f7f9fc;
+    color: #333;
+  }
+  header, footer {
+    background-color: #2b2d42;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
   }
   .container {
     max-width: 960px;
@@ -31,64 +39,72 @@
     padding: 20px;
     background: white;
   }
-  header, footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-  }
   nav {
-    background: #444;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    background: #8d99ae;
+    padding: 10px;
+    text-align: center;
   }
   nav a {
-    color: #fff;
-    padding: 14px 20px;
-    display: inline-block;
+    color: white;
+    margin: 0 15px;
     text-decoration: none;
+    font-weight: bold;
   }
   nav a:hover {
-    background: #555;
+    text-decoration: underline;
   }
   .section {
     margin: 20px 0;
     padding: 20px;
-    background: #fff;
+    background: #ffffff;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   }
-  form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 4px;
-    margin-bottom: 12px;
+  .search-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .search-container input {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px;
+    font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  form button {
-    background: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  form button:hover {
-    background: #555;
+    border-radius: 6px;
   }
   @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-    }
     nav a {
-      text-align: center;
+      display: block;
+      margin: 10px 0;
+    }
+    .search-container input {
+      width: 95%;
     }
   }
 </style>
 
+
 </head>
 <body>
+
+<script>
+function searchContent() {
+    var input = document.getElementById("searchInput").value.toLowerCase();
+    var sections = document.querySelectorAll(".section");
+    sections.forEach(function(section) {
+        var text = section.textContent.toLowerCase();
+        section.style.display = text.includes(input) ? "block" : "none";
+    });
+}
+</script>
+
+<header><h1>Sistema Integrado de Diagnóstico MTC</h1></header>
+
+<div class="search-container">
+    <input type="text" id="searchInput" onkeyup="searchContent()" placeholder="Pesquisar neste documento...">
+</div>
+
+<div class='container'>
 <script>
   var senha = prompt("Por favor, introduza a palavra-passe para aceder:");
   if (senha !== "mtc2025") {
@@ -1984,5 +2000,7 @@
   </form>
 </div>
 
+</div>
+<footer><p>© 2025 MTC Clínica</p></footer>
 </body>
 </html>
